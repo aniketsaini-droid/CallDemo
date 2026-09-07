@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CredResolve — Voice AI</title>
+  <meta name="description" content="CredResolve Voice AI — Instant collections voice bots. Tap to call directly." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=3.3" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- AMBIENT WARM HALFTONE & GLOW BACKGROUND (CredResolve Style)  -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div class="global-halftone-bg"></div>
+  <div class="ambient-glow-orbs">
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="glow-orb glow-orb-3"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- MAIN VOICE BOT CALLER APPLICATION                          -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div class="caller-app">
+    
+    <!-- Floating Pill Navigation -->
+    <nav class="navbar floating-pill-nav">
+      <div class="nav-left">
+        <div class="logo">
+          <img src="logo.png?v=3" class="brand-logo-img" alt="CredResolve" />
+          <span class="logo-text">CredResolve</span>
+        </div>
+      </div>
+      <div class="nav-center">
+        <span class="nav-pill-badge"><span class="badge-dot green-pulse"></span> Voice AI Assistant</span>
+      </div>
+      <div class="nav-right">
+        <span class="status-live-chip"><span class="pulse-ring-dot"></span> Live 24/7</span>
+      </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="user-main">
+      <div class="user-hero">
+        <div class="hero-capsule-badge animate-in">
+          <span class="capsule-tag">AI-Native</span>
+          <span class="capsule-text">Collections infrastructure</span>
+        </div>
+        
+        <h1 class="user-display-title animate-in delay-1">
+          One Platform. Every bucket.<br/><span class="gradient-text">Pre-due to Write-off.</span>
+        </h1>
+        
+        <p class="user-subtitle animate-in delay-2">
+          AI-powered collections across voice. Choose an AI voice bot below to connect instantly.
+        </p>
+
+        <!-- Live Floating Metric Badges -->
+        <div class="floating-stats animate-in delay-3">
+          <div class="stat-pill pill-float-1"><span class="stat-dot green"></span> Intent: Promise to Pay: 78%</div>
+          <div class="stat-pill pill-float-2"><span class="stat-dot orange"></span> Contact Rate: 85%</div>
+          <div class="stat-pill pill-float-3"><span class="stat-dot blue"></span> Recovery: +24%</div>
+        </div>
+      </div>
+
+      <!-- Voice Bot Cards Grid -->
+      <div id="user-bot-grid" class="bot-grid user-bot-grid">
+        <!-- Injected dynamically by JS -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="user-empty" class="empty-state" style="display:none;">
+        <div class="empty-icon">
+          <img src="logo.png?v=3" class="empty-logo-spin" alt="CredResolve" width="68" height="68" />
+        </div>
+        <h3>No Voice Bots Available</h3>
+        <p>No active voice endpoints configured at the moment.</p>
+      </div>
+    </main>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- CALL MODAL (Voice AI Session Terminal)                       -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div id="call-modal" class="modal-overlay" onclick="closeCallModalOutside(event)">
+    <div class="modal call-modal animate-modal">
+      <div class="call-modal-content">
+        <div class="call-avatar" id="call-avatar">
+          <div class="call-ring ring-1"></div>
+          <div class="call-ring ring-2"></div>
+          <div class="call-ring ring-3"></div>
+          <div class="call-avatar-inner" id="call-avatar-inner">
+            <!-- Initial or icon -->
+          </div>
+        </div>
+
+        <!-- Live Simulated Audio Frequency Waves -->
+        <div class="modal-voice-waves">
+          <span class="m-wave mw-1"></span>
+          <span class="m-wave mw-2"></span>
+          <span class="m-wave mw-3"></span>
+          <span class="m-wave mw-4"></span>
+          <span class="m-wave mw-5"></span>
+          <span class="m-wave mw-6"></span>
+          <span class="m-wave mw-7"></span>
+        </div>
+
+        <h3 id="call-bot-name">Bot Name</h3>
+        <p class="call-number" id="call-bot-number">+91 98765 43210</p>
+        <p class="call-status" id="call-status"><span class="call-status-dot"></span> Live AI Voice Line • Ready to Connect</p>
+        
+        <div class="call-actions">
+          <a id="call-btn" href="tel:" class="btn btn-call">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.1.31.03.66-.25 1.02l-2.2 2.2z"/></svg>
+            Start Voice Call Now
+          </a>
+          <button class="btn btn-ghost-dark" onclick="closeCallModal()">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <script src="app.js?v=3.3"></script>
+</body>
+</html>
