@@ -1326,9 +1326,61 @@ body.user-locked #user-screen .nav-left {
   .user-display-title { font-size: 2rem; }
   .role-cards { flex-direction: column; align-items: center; }
   .role-card { width: 100%; max-width: 320px; }
-  .floating-pill-nav { width: calc(100% - 1.5rem); margin: 0.75rem auto 1rem; padding: 0.5rem 1rem; }
+  .floating-pill-nav {
+    width: calc(100% - 1.5rem);
+    margin: 0.75rem auto 1rem;
+    padding: 0.5rem 0.9rem;
+    gap: 0.4rem;
+    box-sizing: border-box;
+  }
+  .nav-pill-badge {
+    padding: 0.25rem 0.65rem;
+    font-size: 0.74rem;
+  }
+  .status-live-chip {
+    font-size: 0.74rem;
+  }
   .admin-main, .user-main { padding: 1.25rem 1rem 3rem; }
   .floating-stats { flex-direction: column; align-items: center; }
+}
+
+@media (max-width: 520px) {
+  .floating-pill-nav {
+    width: calc(100% - 1rem);
+    padding: 0.42rem 0.75rem;
+    gap: 0.35rem;
+  }
+  .logo-text { font-size: 1.05rem; }
+  .brand-logo-img { width: 26px !important; height: 26px !important; }
+  .nav-extra-word { display: none; }
+  .nav-pill-badge {
+    padding: 0.2rem 0.55rem;
+    font-size: 0.7rem;
+    white-space: nowrap;
+  }
+  .status-live-chip {
+    padding: 0.2rem 0.45rem;
+    font-size: 0.7rem;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 380px) {
+  .floating-pill-nav {
+    width: calc(100% - 0.75rem);
+    padding: 0.35rem 0.55rem;
+    gap: 0.25rem;
+  }
+  .logo-text { font-size: 0.95rem; }
+  .brand-logo-img { width: 22px !important; height: 22px !important; }
+  .nav-pill-badge {
+    padding: 0.18rem 0.45rem;
+    font-size: 0.67rem;
+  }
+  .status-live-chip {
+    padding: 0.18rem 0.4rem;
+    font-size: 0.67rem;
+  }
 }
 
 @media (max-width: 480px) {
