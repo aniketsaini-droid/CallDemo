@@ -4,7 +4,7 @@
    ════════════════════════════════════════════════════════════════ */
 
 // ─── Official Voice AI Endpoints ────────────────────────────────
-const STORAGE_KEY = 'credresolve_voice_bots_v2';
+const STORAGE_KEY = 'credresolve_voice_bots_v3';
 const OFFICIAL_BOTS = [
   {
     id: 'bot_loan_sales',
@@ -36,7 +36,7 @@ const OFFICIAL_BOTS = [
   {
     id: 'bot_overdue',
     name: 'Overdue Bot',
-    number: '+918065970510',
+    number: '+918065970526',
     desc: 'Delinquency recovery, promise-to-pay arrangements & customized settlement waivers',
     badge: 'Overdue Bucket',
     color: '#EA580C',
